@@ -11,21 +11,66 @@
           />
       </b-navbar-nav>
     </b-navbar>
+
+    <b-navbar type="light" class="d-flex justify-content-between" v-else-if="currentPage == 'PageTeamName'">
+      <b-navbar-nav :style="{width:'41px'}">
+
+      </b-navbar-nav>
+      <b-navbar-nav>
+        <pagenation-navi :size="2" />
+      </b-navbar-nav>
+      <b-navbar-nav>
+        <navi-button
+            class="nextButtonClass"
+            :logo="NextLogoPath"
+            :handler="nextHandler"
+            labelOrientation="right"
+          />
+      </b-navbar-nav>
+    </b-navbar>
+
+    <b-navbar type="light" class="d-flex justify-content-between" v-else-if="currentPage == 'PageCharacterSelect'">
+      <b-navbar-nav >
+        <navi-button
+            class="nextButtonClass"
+            :logo="PrevLogoPath"
+            :handler="prevHandler"
+            labelOrientation="right"
+          />
+      </b-navbar-nav>
+      <b-navbar-nav>
+        <pagenation-navi :size="2" />
+      </b-navbar-nav>
+      <b-navbar-nav>
+        <navi-button
+            class="nextButtonClass"
+            :logo="NextLogoPath"
+            :handler="nextHandler"
+            labelOrientation="right"
+          />
+      </b-navbar-nav>
+    </b-navbar>
   </div>
 </template>
 
 <script>
 import NaviButton from "./ButtonNavigation.vue";
+import PagenationNavi from "./PagenationNavigation.vue";
+
 import NextLogo from "../assets/images/nextLogo.png";
+import PrevLogo from "../assets/images/prevLogo.png";
+
 
 export default {
   data() {
     return {
       NextLogoPath: NextLogo,
+      PrevLogoPath: PrevLogo
     };
   },
   components: {
     NaviButton,
+    PagenationNavi
   },
   computed: {
     currentPage() {
@@ -34,6 +79,7 @@ export default {
   },
   methods:{
       nextHandler() {},
+      prevHandler() {}
   }
 };
 </script>

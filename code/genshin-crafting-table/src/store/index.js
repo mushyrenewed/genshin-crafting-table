@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state:{
-        page: "PageTeamName"
+        page: "PageCharacterSelect"
     },
     mutations: {
         changePage(state, name){

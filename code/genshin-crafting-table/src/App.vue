@@ -54,4 +54,9 @@ html {
   left: 0;
   z-index: -100;
 }
+
+.simplebar-content,.simplebar-content::before{
+    display: flex;
+    flex-wrap: wrap;
+}
 </style>

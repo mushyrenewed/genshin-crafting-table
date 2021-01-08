@@ -9,11 +9,13 @@
 <script>
 import PageSignIn from './PageSignIn.vue'
 import PageTeamName from './PageTeamName.vue'
+import PageCharacterSelect from './PageCharacterSelect.vue'
 
 export default {
     components: {
         PageSignIn,
-        PageTeamName
+        PageTeamName,
+        PageCharacterSelect
     },
     computed: {
         currentPage(){
