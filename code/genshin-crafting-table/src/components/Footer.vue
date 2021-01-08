@@ -50,12 +50,23 @@
           />
       </b-navbar-nav>
     </b-navbar>
+
+     <b-navbar type="light" class="d-flex justify-content-between" v-else>
+       <b-navbar-nav>
+         <ButtonWithBG label="Switch Team" :imagePath="require('../assets/images/buttonBG.png')" :width="122" :height="29"/>
+         
+       </b-navbar-nav>
+       <b-navbar-nav>
+         <ButtonWithBG label="Save" :imagePath="require('../assets/images/buttonBG.png')" :width="82" :height="29"/>
+       </b-navbar-nav>
+     </b-navbar>
   </div>
 </template>
 
 <script>
 import NaviButton from "./ButtonNavigation.vue";
 import PagenationNavi from "./PagenationNavigation.vue";
+import ButtonWithBG from "./ButtonWithBG.vue";
 
 import NextLogo from "../assets/images/nextLogo.png";
 import PrevLogo from "../assets/images/prevLogo.png";
@@ -70,7 +81,8 @@ export default {
   },
   components: {
     NaviButton,
-    PagenationNavi
+    PagenationNavi,
+    ButtonWithBG
   },
   computed: {
     currentPage() {

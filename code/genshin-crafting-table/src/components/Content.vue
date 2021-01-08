@@ -10,12 +10,14 @@
 import PageSignIn from './PageSignIn.vue'
 import PageTeamName from './PageTeamName.vue'
 import PageCharacterSelect from './PageCharacterSelect.vue'
+import PageMain from './PageMain.vue'
 
 export default {
     components: {
         PageSignIn,
         PageTeamName,
-        PageCharacterSelect
+        PageCharacterSelect,
+        PageMain
     },
     computed: {
         currentPage(){
