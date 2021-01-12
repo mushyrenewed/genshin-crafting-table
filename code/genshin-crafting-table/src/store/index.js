@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         page: "PageMain",
-        mainSection: "MainAttribute",
+        mainSection: "MainPreview",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
         character: {
@@ -50,7 +50,9 @@ const store = new Vuex.Store({
                     physical_res: "0.0%",
                 }
             }
-        }
+        },
+        previewPage: "Pyro",
+        previewItems: ["Amber", "Bennett", "Diluc", "Klee", "Xiangling"]
     },
     mutations: {
         changePage(state, name){

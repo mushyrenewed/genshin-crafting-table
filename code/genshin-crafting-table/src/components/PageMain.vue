@@ -24,6 +24,7 @@ import ToolCharacterSelected from "./ToolCharacterSelected.vue";
 import ToolElementResonance from "./ToolElementResonance.vue";
 import MainMenu from './MainMenu.vue';
 import MainAttribute from './MainAttribute.vue';
+import MainPreview from './MainPreview.vue';
 
 export default {
   data() {
@@ -40,7 +41,8 @@ export default {
     ToolCharacterSelected,
     ToolElementResonance,
     MainMenu,
-    MainAttribute
+    MainAttribute,
+    MainPreview
   },
 };
 </script>

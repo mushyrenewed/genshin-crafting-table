@@ -1,5 +1,6 @@
 <template>
   <div class="attributeClass">
+    <!-- Top Corner -->
     <div class="topCornerClass d-flex justify-content-between">
       <span> Attribute </span>
 
@@ -18,7 +19,10 @@
     </div>
 
     <!-- Information Section -->
-    <simplebar class="contentClass d-flex flex-column" :style="{overflowX:'hidden'}">
+    <simplebar
+      class="contentClass d-flex flex-column"
+      :style="{ overflowX: 'hidden' }"
+    >
       <div :style="{ width: '100%' }">
         <!-- Base Stats -->
         <h6>Base Stats</h6>
@@ -101,9 +105,7 @@
                 />
                 <attribute-item
                   stat_name="Pyro RES"
-                  :stat_value="
-                    characterInfo.attribute.elemental_type.pyro_res
-                  "
+                  :stat_value="characterInfo.attribute.elemental_type.pyro_res"
                 />
                 <attribute-item
                   stat_name="Hydro DMG Bonus"
@@ -113,9 +115,7 @@
                 />
                 <attribute-item
                   stat_name="hydro RES"
-                  :stat_value="
-                    characterInfo.attribute.elemental_type.hydro_res
-                  "
+                  :stat_value="characterInfo.attribute.elemental_type.hydro_res"
                 />
                 <attribute-item
                   stat_name="Dendro DMG Bonus"
@@ -149,9 +149,7 @@
                 />
                 <attribute-item
                   stat_name="Anemo RES"
-                  :stat_value="
-                    characterInfo.attribute.elemental_type.anemo_res
-                  "
+                  :stat_value="characterInfo.attribute.elemental_type.anemo_res"
                 />
                 <attribute-item
                   stat_name="Cryo DMG Bonus"
@@ -161,9 +159,7 @@
                 />
                 <attribute-item
                   stat_name="Cryo RES"
-                  :stat_value="
-                    characterInfo.attribute.elemental_type.cryo_res
-                  "
+                  :stat_value="characterInfo.attribute.elemental_type.cryo_res"
                 />
                 <attribute-item
                   stat_name="Geo DMG Bonus"
@@ -173,9 +169,7 @@
                 />
                 <attribute-item
                   stat_name="Geo RES"
-                  :stat_value="
-                    characterInfo.attribute.elemental_type.geo_res
-                  "
+                  :stat_value="characterInfo.attribute.elemental_type.geo_res"
                 />
                 <attribute-item
                   stat_name="Physical DMG Bonus"
