@@ -26,10 +26,12 @@ export default {
 <style scoped>
 .imageClass {
   cursor: pointer;
+  
 }
 
 .imageClass:focus,
 .imageClass:hover {
   border-bottom: 2px solid #2cc5ff;
+  margin-bottom: -2px;
 }
 </style>

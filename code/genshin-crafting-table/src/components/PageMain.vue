@@ -9,7 +9,9 @@
       <div class="charactersClass">
         <tool-character-selected />
       </div>
-      <div class="resonanceClass"></div>
+      <div class="resonanceClass">
+        <tool-element-resonance :elemental_resonance="['Pyro', 'Pyro']" />
+      </div>
     </div>
     <div class="mainClass">
       <component :is="mainCurrentPage"> </component>
@@ -19,6 +21,8 @@
 
 <script>
 import ToolCharacterSelected from "./ToolCharacterSelected.vue";
+import ToolElementResonance from "./ToolElementResonance.vue";
+import Menu from './Menu.vue';
 
 export default {
   data() {
@@ -33,6 +37,8 @@ export default {
   },
   components: {
     ToolCharacterSelected,
+    ToolElementResonance,
+    Menu
   },
 };
 </script>
