@@ -10,14 +10,14 @@
 
     <simplebar class="characterSectionClass d-flex flex-wrap">
       <template v-for="(character, i) in characters">
-          <character-button :imagePath="require(`../assets/images/${character}.png`)" :name="character" :key="i" class="m-3"/>
+          <character-button :imagePath="require(`../assets/images/${character}.png`)" :name="character" :key="i" class="m-3" :handler="characterSelectHandler"/>
       </template>    
     </simplebar>
   </div>
 </template>
 
 <script>
-import CharacterButton from "./ButtonCharacter.vue";
+import CharacterButton from "./ButtonItem.vue";
 import Simplebar from "simplebar-vue";
 import 'simplebar/dist/simplebar.min.css';
 
@@ -36,6 +36,9 @@ export default {
     CharacterButton,
     Simplebar
   },
+  methods:{
+    characterSelectHandler(){}
+  }
 };
 </script>
 

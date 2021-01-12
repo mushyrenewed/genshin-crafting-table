@@ -14,12 +14,13 @@
     <!-- Content -->
     <simplebar class="contentClass d-flex flex-wrap">
       <template v-for="(item, i) in currentPreviewItems">
-        <button-character
+        <button-item
           :name="item"
           :imagePath="require(`../assets/images/${item}.png`)"
           :key="i"
           class="m-2"
           :style="{textAlign:'center'}"
+          :handler="previewItemHandler"
         />
       </template>
     </simplebar>
@@ -27,14 +28,14 @@
 </template>
 
 <script>
-import ButtonCharacter from "./ButtonCharacter.vue";
+import ButtonItem from "./ButtonItem.vue";
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
 
 export default {
   components: {
     Simplebar,
-    ButtonCharacter,
+    ButtonItem,
   },
   computed: {
     currentPreviewPage() {
