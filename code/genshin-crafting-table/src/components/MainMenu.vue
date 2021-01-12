@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style scoped>
+.menuClass{
+    padding: 15px;
+}
 </style>

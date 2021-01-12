@@ -53,11 +53,11 @@
 
      <b-navbar type="light" class="d-flex justify-content-between" v-else>
        <b-navbar-nav>
-         <ButtonWithBG label="Switch Team" :imagePath="require('../assets/images/buttonBG.png')" :width="122" :height="29"/>
+         <ButtonWithBG label="Switch Team" :imagePath="require('../assets/images/buttonBG.png')" :width="122" :height="29" :handler="switchCharHandler"/>
          
        </b-navbar-nav>
        <b-navbar-nav>
-         <ButtonWithBG label="Save" :imagePath="require('../assets/images/buttonBG.png')" :width="82" :height="29"/>
+         <ButtonWithBG label="Save" :imagePath="require('../assets/images/buttonBG.png')" :width="82" :height="29" :handler="saveHandler"/>
        </b-navbar-nav>
      </b-navbar>
   </div>
@@ -91,7 +91,9 @@ export default {
   },
   methods:{
       nextHandler() {},
-      prevHandler() {}
+      prevHandler() {},
+      switchCharHandler(){},
+      saveHandler(){}
   }
 };
 </script>

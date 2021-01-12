@@ -22,7 +22,8 @@
 <script>
 import ToolCharacterSelected from "./ToolCharacterSelected.vue";
 import ToolElementResonance from "./ToolElementResonance.vue";
-import Menu from './Menu.vue';
+import MainMenu from './MainMenu.vue';
+import MainAttribute from './MainAttribute.vue';
 
 export default {
   data() {
@@ -38,7 +39,8 @@ export default {
   components: {
     ToolCharacterSelected,
     ToolElementResonance,
-    Menu
+    MainMenu,
+    MainAttribute
   },
 };
 </script>
@@ -56,7 +58,7 @@ p {
   width: 100%;
   height: calc((100vh) - 215px - 61px);
   overflow-y: auto;
-  padding: 15px;
+  padding-top: 5px;
 }
 </style>
 

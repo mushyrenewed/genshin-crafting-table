@@ -11,7 +11,7 @@
 <script>
 export default {
   props: {
-    elemental_resonance: [String],
+    elemental_resonance: Array,
   },
 };
 </script>
