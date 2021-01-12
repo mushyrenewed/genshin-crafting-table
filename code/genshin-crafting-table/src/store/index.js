@@ -7,10 +7,33 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         page: "PageMain",
-        mainSection: "MainPreview",
+        mainSection: "MainPreviewDetails",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
         character: {
+            name: "Diluc",
+            introduction: "As the wealthiest gentleman in \
+            Mondstadt, the ever-dapper Diluc always \
+            presents himself as the epitome of \
+            perfection. But behind the courteous \
+            visage burns a zealous soul that has sworn \
+            to protect Mondstadt at all costs, allowing \
+            him to mercilessly vanquish all who \
+            threaten his city.",
+            personality: "Kaeya calls himself and Diluc \"anti-heroes with \
+            attitude problems.\" Diluc was once a confident and \
+            passionate young man, dedicated to his work with \
+            the Knights of Favonius. But after his father's \
+            untimely death, Diluc grew aloof, bitter, and distant. \
+            He dislikes wasting time on idle talk and grows \
+            impatient easily.\
+            \
+            Diluc holds a particular resentment towards the \
+            Knights of Favonius, whom he calls \"inefficient\" \
+            and snubs at every opportunity. This bitterness stems \
+            from Inspector Eroch's handling of his father's death, \
+            and Diluc has not lessened his bitterness even after \
+            Eroch was discharged from the Knights as a traitor.",
             element: "Pyro",
             weapon_type: "Claymore",
             level: 1,
@@ -52,7 +75,8 @@ const store = new Vuex.Store({
             }
         },
         previewPage: "Pyro",
-        previewItems: ["Amber", "Bennett", "Diluc", "Klee", "Xiangling"]
+        previewItems: ["Amber", "Bennett", "Diluc", "Klee", "Xiangling"],
+        previewCharacter: "Diluc"
     },
     mutations: {
         changePage(state, name){
