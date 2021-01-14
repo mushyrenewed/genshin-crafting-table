@@ -22,6 +22,10 @@ export default {
     padding-left: 25px;
 }
 
+.buttonWithBGClass:hover{
+    cursor: pointer;
+}
+
 span{
     font-size: 0.875rem;
 }

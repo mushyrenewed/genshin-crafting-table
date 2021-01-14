@@ -13,10 +13,10 @@
 
     <!-- Character Traits -->
     <div class="characterTraitsClass d-flex justify-content-center">
-      <small class="mr-2" :style="{ color: elementColor }"
+      <small class="mr-2" :style="{ color: elementColor }" @click="traitFilterHandler"
         >&bullet; {{ characterInfo.element }}
       </small>
-      <small>&bullet; {{ characterInfo.weapon_type }}</small>
+      <small @click="traitFilterHandler">&bullet; {{ characterInfo.weapon_type }}</small>
     </div>
 
     <!-- Character Image -->
@@ -29,13 +29,13 @@
 
     <!-- Details -->
     <simplebar class="detailsClass d-flex flex-column mt-2">
-      <div :style="{width:'100%'}">
+      <div :style="{ width: '100%' }">
         <span>Introduction</span>
         <p class="mt-3">{{ characterInfo.introduction }}</p>
 
         <span>Personality</span>
         <p class="mt-3">
-            {{characterInfo.personality}}
+          {{ characterInfo.personality }}
         </p>
       </div>
     </simplebar>
@@ -92,6 +92,7 @@ export default {
   methods: {
     closeHandler() {},
     buttonHandler() {},
+    traitFilterHandler(){}
   },
 };
 </script>
@@ -122,5 +123,13 @@ span {
   font-weight: bold;
   color: #1d1d1d;
   opacity: 0.64;
+}
+
+.closeButtonClass:hover {
+  cursor: pointer;
+}
+
+small:hover{
+  cursor: pointer;
 }
 </style>

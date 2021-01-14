@@ -22,4 +22,8 @@ export default {
 .buttonGeneralClass > span{
     color: #444343;
 }
+
+.buttonGeneralClass:hover{
+    cursor: pointer;
+}
 </style>
