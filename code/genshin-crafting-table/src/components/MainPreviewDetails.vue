@@ -1,6 +1,7 @@
 <template>
   <div class="previewDetailsClass">
-    <!-- Top Corner -->
+    <main-background>
+      <!-- Top Corner -->
     <div class="topCornerClass d-flex justify-content-between">
       <span> Preview </span>
 
@@ -49,17 +50,22 @@
         <button-general label="Add" :handler="buttonHandler" />
       </template>
     </div>
+    </main-background>
+    
   </div>
 </template>
 
 <script>
 import ButtonGeneral from "./ButtonGeneral.vue";
+import MainBackground from "./MainBackground.vue";
+
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
 
 export default {
   components: {
     ButtonGeneral,
+    MainBackground,
     Simplebar,
   },
   computed: {
@@ -99,14 +105,7 @@ export default {
 
 <style scoped>
 .previewDetailsClass {
-  background-color: #d9cab4;
-  background-image: url(../assets/images/MainPageBg.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 100%;
-  padding: 15px;
-  position: relative;
 }
 
 .detailsClass {

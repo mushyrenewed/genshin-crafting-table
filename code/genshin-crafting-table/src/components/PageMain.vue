@@ -62,7 +62,7 @@ p {
   width: 100%;
   height: calc((100vh) - 215px - 61px);
   overflow-y: auto;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 </style>
 
