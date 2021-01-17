@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         page: "PageMain",
-        mainSection: "MainAttribute",
+        mainSection: "MainSearchItems",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
         character: {
@@ -74,6 +74,7 @@ const store = new Vuex.Store({
                 }
             }
         },
+        previewSearchType: "Weapons",
         previewPage: "Pyro",
         previewItems: ["Amber", "Bennett", "Diluc", "Klee", "Xiangling"],
         previewCharacter: "Diluc"

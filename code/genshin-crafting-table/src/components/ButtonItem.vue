@@ -1,7 +1,7 @@
 <template>
     <div class="characterButtonClass d-flex flex-column justify-content-center" @click="handler">
         <img :src="imagePath" alt="character" height="67px" width="67px">
-        <p>{{name}}</p>
+        <p class="mt-1">{{name}}</p>
     </div>
 </template>
 
@@ -19,8 +19,9 @@ export default {
     .characterButtonClass{
         background-color: rgba(255, 255, 255, 0.54);
         border-radius: 5px;
-        width: 71px;
-        height: 87px;
+        max-width: 80px;
+        line-height: normal;
+        padding: 5px;
         cursor: pointer;
     }
     .characterButtonClass:focus, .characterButtonClass:hover{

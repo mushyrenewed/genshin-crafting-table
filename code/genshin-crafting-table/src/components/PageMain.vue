@@ -26,6 +26,7 @@ import MainMenu from './MainMenu.vue';
 import MainAttribute from './MainAttribute.vue';
 import MainPreview from './MainPreview.vue';
 import MainPreviewDetails from './MainPreviewDetails.vue';
+import MainSearchItems from './MainSearchItems.vue';
 
 export default {
   data() {
@@ -44,7 +45,8 @@ export default {
     MainMenu,
     MainAttribute,
     MainPreview,
-    MainPreviewDetails
+    MainPreviewDetails,
+    MainSearchItems
   },
 };
 </script>
