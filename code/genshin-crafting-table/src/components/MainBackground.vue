@@ -22,7 +22,7 @@ export default {};
 }
 .genshinTapeClass {
   position: absolute;
-  right: 50%;
+  right: calc(50% - 12px);
   margin-top: -25px;
 }
 </style>

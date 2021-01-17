@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         page: "PageMain",
-        mainSection: "MainSearchItems",
+        mainSection: "MainPreviewDetails",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
         character: {
@@ -35,6 +35,27 @@ const store = new Vuex.Store({
             and Diluc has not lessened his bitterness even after \
             Eroch was discharged from the Knights as a traitor.",
             element: "Pyro",
+            weapon: {
+                id: "",
+                name: "Wolf Gravestone",
+                weapon_type: "Claymore",
+                rarity: "5",
+                how_to_obtain: "Gatcha",
+                refine: {
+                    level: "1",
+                    effect: "Increases ATK by 20%. On hit, attacks against enemies with less than 30% HP increase all party members' ATK by 40% for 12s. Can only occur once every 30s.",
+                },
+                weapon_attribute: {
+                    level: "20",
+                    base_attack: "122",
+                    secondary_stat_name: "ATK",
+                    secondary_stat_value: "19.1%",
+                    ascension:{
+                        level: "1",
+                        base_attack: "153",
+                    }
+                }
+            },
             weapon_type: "Claymore",
             level: 1,
             attribute: {
