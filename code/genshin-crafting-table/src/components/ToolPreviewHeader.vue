@@ -1,23 +1,29 @@
 <template>
-    <!-- Top Corner -->
-    <div class="topCornerClass d-flex justify-content-between">
+  <!-- Top Corner -->
+  <div class="topCornerClass row">
+    <div class="col-3">
       <span> Preview </span>
+    </div>
 
+    <div class="col-6 text-center">
       <span>{{ label }}</span>
+    </div>
 
-      <span class="closeButtonClass ml-5" @click="closeHandler">
+    <div class="col-3 text-right">
+      <span class="closeButtonClass" @click="closeHandler">
         <img src="../assets/images/close.svg" alt="close" />
       </span>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    props:{
-        label: String,
-        closeHandler: Function
-    }
-}
+  props: {
+    label: String,
+    closeHandler: Function,
+  },
+};
 </script>
 
 <style scoped>

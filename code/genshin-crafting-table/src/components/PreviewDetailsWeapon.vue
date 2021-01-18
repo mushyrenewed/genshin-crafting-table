@@ -88,6 +88,34 @@ import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
 
 export default {
+  data(){
+    return{
+      // temporary, just testing the view. Remove this later
+      // This component should search for the weapon info using weapon id
+      weapon: {
+        id: 41231,
+        name: "Wolf Gravestone",
+        weapon_type: "Claymore",
+        rarity: "5",
+        how_to_obtain: "Gatcha",
+        refine: {
+          level: "1",
+          effect:
+            "Increases ATK by 20%. On hit, attacks against enemies with less than 30% HP increase all party members' ATK by 40% for 12s. Can only occur once every 30s.",
+        },
+        weapon_attribute: {
+          level: "20",
+          base_attack: "122",
+          secondary_stat_name: "ATK",
+          secondary_stat_value: "19.1%",
+          ascension: {
+            level: "1",
+            base_attack: "153",
+          },
+        },
+      },
+    }
+  },
   components: {
     ButtonGeneral,
     Simplebar,
@@ -95,7 +123,7 @@ export default {
     ToolWeaponStatsByLevel,
   },
   props: {
-    weapon: Object,
+    weapon_id: Number,
     filename: String,
   },
   computed: {
@@ -123,7 +151,7 @@ export default {
 }
 
 .weaponDetailsClass {
-  height: calc(100% - 12px - 40px);
+  height: calc(100% - 12px - 70px);
 }
 
 span {
