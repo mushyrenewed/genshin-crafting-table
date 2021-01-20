@@ -22,6 +22,12 @@
           :artifact_set_id="3214"
         />
       </template>
+
+      <template v-else-if="previewType === 'Artifact'">
+        <preview-details-artifact 
+          :artifact_id="21321"
+        />
+      </template>
     </main-background>
   </div>
 </template>
@@ -31,13 +37,15 @@ import MainBackground from "./MainBackground.vue";
 import PreviewDetailsCharacter from "./PreviewDetailsCharacter.vue";
 import PreviewDetailsWeapon from "./PreviewDetailsWeapon.vue";
 import PreviewDetailsArtifactSet from "./PreviewDetailsArtifactSet.vue";
+import PreviewDetailsArtifact from "./PreviewDetailsArtifact.vue";
+
 import ToolPreviewHeader from "./ToolPreviewHeader.vue";
 
 export default {
   data() {
     return {
-      previewType: "Artifact-Set", // This will be a prop
-      previewHeaderTitle: "Crimson Witch Flames", // this will be a prop
+      previewType: "Artifact", // This will be a prop
+      previewHeaderTitle: "Witch's Ever-Burning Plum", // this will be a prop
     };
   },
   components: {
@@ -45,6 +53,7 @@ export default {
     PreviewDetailsCharacter,
     PreviewDetailsWeapon,
     PreviewDetailsArtifactSet,
+    PreviewDetailsArtifact,
     ToolPreviewHeader,
   },
   computed: {

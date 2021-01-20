@@ -56,6 +56,163 @@ const store = new Vuex.Store({
                     }
                 }
             },
+            artifact:{
+                flower:{
+                    artifact_id: 1234,
+                    name: "",
+                    artifact_set_id: 321,
+                    rarity: "5",
+                    main_attribute:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_1:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_2:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_3:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_4:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    }
+                },
+                feather:{
+                    artifact_id: 1234,
+                    name: "",
+                    artifact_set_id: 321,
+                    rarity: "",
+                    main_attribute:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_1:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_2:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_3:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_4:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    }
+                },
+                time_piece:{
+                    artifact_id: 1234,
+                    name: "",
+                    artifact_set_id: 321,
+                    rarity: "",
+                    main_attribute:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_1:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_2:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_3:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_4:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    }
+                },
+                chalice:{
+                    artifact_id: 1234,
+                    name: "",
+                    artifact_set_id: 321,
+                    rarity: "",
+                    main_attribute:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_1:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_2:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_3:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_4:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    }
+                },
+                hat:{
+                    artifact_id: 1234,
+                    name: "",
+                    artifact_set_id: 321,
+                    rarity: "",
+                    main_attribute:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_1:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_2:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_3:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    },
+                    bonus_attr_4:{
+                        id: 2134,
+                        attribute_name: "",
+                        attribute_value: ""
+                    }
+                }
+            },
             weapon_type: "Claymore",
             level: 1,
             attribute: {

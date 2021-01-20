@@ -20,7 +20,7 @@ export default {};
   padding: 15px;
   position: relative;
 }
-.genshinTapeClass {
+.genshinTapeClass { 
   position: absolute;
   right: calc(50% - 12px);
   margin-top: -25px;
