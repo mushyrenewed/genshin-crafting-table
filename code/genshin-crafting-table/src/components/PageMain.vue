@@ -28,6 +28,7 @@ import MainPreview from './MainPreview.vue';
 import MainPreviewDetails from './MainPreviewDetails.vue';
 import MainSearchItems from './MainSearchItems.vue';
 import MainTeam from "./MainTeam.vue";
+import MainConstellation from "./MainConstellation.vue";
 
 export default {
   data() {
@@ -48,7 +49,8 @@ export default {
     MainPreview,
     MainPreviewDetails,
     MainSearchItems,
-    MainTeam
+    MainTeam,
+    MainConstellation
   },
 };
 </script>
