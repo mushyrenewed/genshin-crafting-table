@@ -96,10 +96,6 @@ p {
   font-size: 0.75rem;
 }
 
-.artifactList {
-
-}
-
 .artifactSetDetails {
   position: absolute;
   bottom: 0;
