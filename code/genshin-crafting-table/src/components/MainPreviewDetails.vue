@@ -28,6 +28,11 @@
           :artifact_id="21321"
         />
       </template>
+      <template v-else-if="previewType === 'Constellation'">
+        <preview-details-constellation 
+        :constellation_id="1234"
+        />
+      </template>
     </main-background>
   </div>
 </template>
@@ -38,14 +43,15 @@ import PreviewDetailsCharacter from "./PreviewDetailsCharacter.vue";
 import PreviewDetailsWeapon from "./PreviewDetailsWeapon.vue";
 import PreviewDetailsArtifactSet from "./PreviewDetailsArtifactSet.vue";
 import PreviewDetailsArtifact from "./PreviewDetailsArtifact.vue";
+import PreviewDetailsConstellation from "./PreviewDetailsConstellation.vue";
 
 import ToolPreviewHeader from "./ToolPreviewHeader.vue";
 
 export default {
   data() {
     return {
-      previewType: "Artifact", // This will be a prop
-      previewHeaderTitle: "Witch's Ever-Burning Plum", // this will be a prop
+      previewType: "Constellation", // This will be a prop
+      previewHeaderTitle: "Conviction", // this will be a prop
     };
   },
   components: {
@@ -54,6 +60,7 @@ export default {
     PreviewDetailsWeapon,
     PreviewDetailsArtifactSet,
     PreviewDetailsArtifact,
+    PreviewDetailsConstellation,
     ToolPreviewHeader,
   },
   computed: {
