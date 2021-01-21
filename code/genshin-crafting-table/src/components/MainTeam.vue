@@ -30,6 +30,12 @@
         />
         <small>{{elemental_resonance.name}}</small>
         <p>{{elemental_resonance.description}}</p>
+
+        <!-- Buttons -->
+        <div class="buttonClass d-flex">
+            <img src="../assets/images/edit_team.png" alt="" class="mr-2" @click="editTeamHandler">
+            <img src="../assets/images/add_team.png" alt="" @click="addTeamHandler">
+        </div>
     </main-background>
   </div>
 </template>
@@ -61,6 +67,8 @@ export default {
   },
   methods: {
     closeHandler() {},
+    editTeamHandler(){},
+    addTeamHandler(){}
   },
 };
 </script>
@@ -94,5 +102,14 @@ p {
   opacity: 0.64;
   margin: 0;
   margin-top: 5px;
+}
+
+.buttonClass{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 </style>
