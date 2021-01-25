@@ -33,6 +33,10 @@
         :constellation_id="1234"
         />
       </template>
+      <template v-else-if="previewType === 'Talent'">
+        <preview-details-talent
+        :talent_id="1234" />
+      </template>
     </main-background>
   </div>
 </template>
@@ -44,14 +48,15 @@ import PreviewDetailsWeapon from "./PreviewDetailsWeapon.vue";
 import PreviewDetailsArtifactSet from "./PreviewDetailsArtifactSet.vue";
 import PreviewDetailsArtifact from "./PreviewDetailsArtifact.vue";
 import PreviewDetailsConstellation from "./PreviewDetailsConstellation.vue";
+import PreviewDetailsTalent from "./PreviewDetailsTalent.vue";
 
 import ToolPreviewHeader from "./ToolPreviewHeader.vue";
 
 export default {
   data() {
     return {
-      previewType: "Constellation", // This will be a prop
-      previewHeaderTitle: "Conviction", // this will be a prop
+      previewType: "Talent", // This will be a prop
+      previewHeaderTitle: "Tempered Sword", // this will be a prop
     };
   },
   components: {
@@ -61,6 +66,7 @@ export default {
     PreviewDetailsArtifactSet,
     PreviewDetailsArtifact,
     PreviewDetailsConstellation,
+    PreviewDetailsTalent,
     ToolPreviewHeader,
   },
   computed: {
