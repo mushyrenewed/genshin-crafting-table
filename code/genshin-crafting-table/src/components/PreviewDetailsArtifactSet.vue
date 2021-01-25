@@ -2,7 +2,19 @@
   <div class="previewDetailsArtifactSetClass">
     <simplebar class="artifactList" id="artifactList">
         <template v-for="(item, i) in result">
-            <button-item :name="item.name" :imagePath="require(`../assets/images/${item.filename}`)" :handler="itemHandler" :key="i" class="m-2"/>
+          <button-genshin :key="i" :buttonHandler="itemHandler" class="m-2">
+            <div
+              class="characterButtonClass d-flex flex-column justify-content-center h-100"
+            >
+              <img
+                :src="require(`../assets/images/${item.filename}`)"
+                alt="character"
+                height="67px"
+                width="67px"
+              />
+              <p class="mt-1 text-center">{{ item.name }}</p>
+            </div>
+          </button-genshin>
         </template>     
     </simplebar>
     <div class="artifactSetDetails text-center" id="artifactSetDetails">
@@ -28,7 +40,7 @@
 </template>
 
 <script>
-import ButtonItem from "./ButtonItem.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
@@ -65,7 +77,7 @@ export default {
   },
   components: {
     Simplebar,
-    ButtonItem
+    ButtonGenshin
   },
   methods:{
       itemHandler(){}
@@ -100,5 +112,23 @@ p {
   position: absolute;
   bottom: 0;
   padding: 10px;
+}
+
+.characterButtonClass {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  max-width: 80px;
+  line-height: normal;
+  padding: 5px;
+  cursor: pointer;
+}
+.characterButtonClass:focus,
+.characterButtonClass:hover {
+  box-shadow: 0 0 5px rgb(81, 238, 133);
+}
+
+.characterButtonClass > p {
+  margin: 0;
+  font-size: 0.875rem;
 }
 </style>

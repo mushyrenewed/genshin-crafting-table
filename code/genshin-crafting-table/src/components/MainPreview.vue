@@ -15,14 +15,19 @@
       <!-- Content -->
       <simplebar class="contentClass d-flex flex-wrap">
         <template v-for="(item, i) in currentPreviewItems">
-          <button-item
-            :name="item"
-            :imagePath="require(`../assets/images/${item}.png`)"
-            :key="i"
-            class="m-2"
-            :style="{ textAlign: 'center' }"
-            :handler="previewItemHandler"
-          />
+          <button-genshin :key="i" :buttonHandler="previewItemHandler" class="m-2">
+            <div
+              class="characterButtonClass d-flex flex-column justify-content-center"
+            >
+              <img
+                :src="require(`../assets/images/${item}.png`)"
+                alt="character"
+                height="67px"
+                width="67px"
+              />
+              <p class="mt-1 text-center">{{ item }}</p>
+            </div>
+          </button-genshin>
         </template>
       </simplebar>
     </main-background>
@@ -30,7 +35,7 @@
 </template>
 
 <script>
-import ButtonItem from "./ButtonItem.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 import MainBackground from "./MainBackground.vue";
 
 import Simplebar from "simplebar-vue";
@@ -39,7 +44,7 @@ import "simplebar/dist/simplebar.min.css";
 export default {
   components: {
     Simplebar,
-    ButtonItem,
+    ButtonGenshin,
     MainBackground,
   },
   computed: {
@@ -75,5 +80,23 @@ span {
 
 .closeButtonClass:hover {
   cursor: pointer;
+}
+
+.characterButtonClass {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  max-width: 80px;
+  line-height: normal;
+  padding: 5px;
+  cursor: pointer;
+}
+.characterButtonClass:focus,
+.characterButtonClass:hover {
+  box-shadow: 0 0 5px rgb(81, 238, 133);
+}
+
+.characterButtonClass > p {
+  margin: 0;
+  font-size: 0.875rem;
 }
 </style>

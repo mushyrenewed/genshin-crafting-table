@@ -10,14 +10,26 @@
 
     <simplebar class="characterSectionClass d-flex flex-wrap">
       <template v-for="(character, i) in characters">
-          <character-button :imagePath="require(`../assets/images/${character}.png`)" :name="character" :key="i" class="m-3" :handler="characterSelectHandler"/>
+        <button-genshin :key="i" :buttonHandler="characterSelectHandler" class="m-2">
+            <div
+              class="characterButtonClass d-flex flex-column justify-content-center"
+            >
+              <img
+                :src="require(`../assets/images/${character}.png`)"
+                alt="character"
+                height="67px"
+                width="67px"
+              />
+              <p class="mt-1 text-center">{{ character }}</p>
+            </div>
+          </button-genshin>
       </template>    
     </simplebar>
   </div>
 </template>
 
 <script>
-import CharacterButton from "./ButtonItem.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 import Simplebar from "simplebar-vue";
 import 'simplebar/dist/simplebar.min.css';
 
@@ -33,7 +45,7 @@ export default {
     };
   },
   components: {
-    CharacterButton,
+    ButtonGenshin,
     Simplebar
   },
   methods:{
@@ -72,5 +84,22 @@ h6 {
   padding: 15px;
 }
 
+.characterButtonClass {
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 5px;
+  max-width: 80px;
+  line-height: normal;
+  padding: 5px;
+  cursor: pointer;
+}
+.characterButtonClass:focus,
+.characterButtonClass:hover {
+  box-shadow: 0 0 5px rgb(81, 238, 133);
+}
+
+.characterButtonClass > p {
+  margin: 0;
+  font-size: 0.875rem;
+}
 
 </style>

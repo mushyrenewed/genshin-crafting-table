@@ -55,7 +55,7 @@ import ToolPreviewHeader from "./ToolPreviewHeader.vue";
 export default {
   data() {
     return {
-      previewType: "Weapon", // This will be a prop
+      previewType: "Artifact-Set", // This will be a prop
       previewHeaderTitle: "Tempered Sword", // this will be a prop
     };
   },
