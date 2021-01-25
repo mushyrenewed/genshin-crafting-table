@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
         page: "PageMain",
-        mainSection: "MainAttribute",
+        mainSection: "MainPreviewDetails",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
         character: {

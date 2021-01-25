@@ -37,24 +37,32 @@
     <!-- Button -->
     <div class="buttonClass mr-3 mb-3">
       <template v-if="isCharacterInTeam">
-        <button-general label="Remove" :handler="buttonHandler" />
+        <button-genshin :buttonHandler="buttonHandler">
+          <div class="buttonGeneralClass">
+            <span>Remove</span>
+          </div>
+        </button-genshin>
       </template>
       <template v-else>
-        <button-general label="Add" :handler="buttonHandler" />
+        <button-genshin :buttonHandler="buttonHandler">
+          <div class="buttonGeneralClass">
+            <span>Add</span>
+          </div>
+        </button-genshin>
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import ButtonGeneral from "./ButtonGeneral.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
 
 export default {
   components: {
     Simplebar,
-    ButtonGeneral,
+    ButtonGenshin
   },
   computed: {
     characterInfo() {
@@ -111,9 +119,23 @@ span {
   opacity: 0.64;
 }
 
-
-
 small:hover{
   cursor: pointer;
+}
+
+.buttonGeneralClass{
+    border: 1px solid #8E8E8E;
+    padding: 5px 10px;
+}
+
+.buttonGeneralClass > span{
+    color: #444343;
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.buttonGeneralClass:hover{
+    cursor: pointer;
 }
 </style>

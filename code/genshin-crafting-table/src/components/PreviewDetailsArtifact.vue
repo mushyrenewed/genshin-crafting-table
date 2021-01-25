@@ -64,17 +64,25 @@
     </simplebar>
     <div class="buttonClass mr-3 mb-3">
       <template v-if="isArtifactEquiped(artifact.artifact_type)">
-        <button-general label="Unequip" :handler="buttonHandler" />
+        <button-genshin :buttonHandler="buttonHandler">
+          <div class="buttonGeneralClass">
+            <span>Unequip</span>
+          </div>
+        </button-genshin>
       </template>
       <template v-else>
-        <button-general label="Equip" :handler="buttonHandler" />
+        <button-genshin :buttonHandler="buttonHandler">
+          <div class="buttonGeneralClass">
+            <span>Equip</span>
+          </div>
+        </button-genshin>
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import ButtonGeneral from "./ButtonGeneral.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 import ToolArtifactRarity from "./ToolArtifactRarity.vue";
 
 import Simplebar from "simplebar-vue";
@@ -130,7 +138,7 @@ export default {
     artifact_id: Number,
   },
   components: {
-    ButtonGeneral,
+    ButtonGenshin,
     ToolArtifactRarity,
     Simplebar,
   },
@@ -234,6 +242,22 @@ p {
 
 .btn-sm {
   font-size: 0.75rem !important;
+}
+
+.buttonGeneralClass{
+    border: 1px solid #8E8E8E;
+    padding: 5px 10px;
+}
+
+.buttonGeneralClass > span{
+    color: #444343;
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.buttonGeneralClass:hover{
+    cursor: pointer;
 }
 </style>
 
