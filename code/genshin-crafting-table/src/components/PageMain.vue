@@ -30,6 +30,7 @@ import MainSearchItems from './MainSearchItems.vue';
 import MainTeam from "./MainTeam.vue";
 import MainConstellation from "./MainConstellation.vue";
 import MainTalent from "./MainTalent.vue";
+import MainEstimation from "./MainEstimation.vue";
 
 export default {
   data() {
@@ -52,7 +53,8 @@ export default {
     MainSearchItems,
     MainTeam,
     MainConstellation,
-    MainTalent
+    MainTalent,
+    MainEstimation
   },
 };
 </script>
