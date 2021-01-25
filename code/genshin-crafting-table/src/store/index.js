@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state:{
-        page: "PageMain",
+        page: "PageSignIn",
         mainSection: "MainPreviewDetails",
         characterSelected: ["Diluc", "Mona", "Venti", "Bennett"],
         characterCurrentLevel: "1",
