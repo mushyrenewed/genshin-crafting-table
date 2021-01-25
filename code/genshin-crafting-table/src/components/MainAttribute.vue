@@ -201,24 +201,28 @@
         </div>
       </simplebar>
       <div class="footerButtonsClass d-flex mr-3 mb-2">
-        <button-character-level
-          label="Level"
-          :imagePath="require(`../assets/images/arrow_up.svg`)"
-          class="mr-1"
-          :handler="levelHandler"
-        />
-        <button-character-level
-          label="Level"
-          :imagePath="require(`../assets/images/arrow_down.svg`)"
-          :handler="levelHandler"
-        />
+
+        <button-genshin :buttonHandler="levelHandler">
+          <div class="buttonCharacterLevelClass mr-1">
+            <span class="mr-2">Level</span>
+            <img :src="require(`../assets/images/arrow_up.svg`)" alt="arrowup" />
+          </div>
+        </button-genshin>
+
+        <button-genshin :buttonHandler="levelHandler">
+          <div class="buttonCharacterLevelClass mr-1">
+            <span class="mr-2">Level</span>
+            <img :src="require(`../assets/images/arrow_down.svg`)" alt="arrowdown" />
+          </div>
+        </button-genshin>
+
       </div>
     </main-background>
   </div>
 </template>
 
 <script>
-import ButtonCharacterLevel from "./ButtonCharacterLevel.vue";
+import ButtonGenshin from "./ButtonGenshin.vue";
 import AttributeItem from "./AttributeItem.vue";
 import MainBackground from "./MainBackground.vue";
 import Simplebar from "simplebar-vue";
@@ -226,7 +230,7 @@ import "simplebar/dist/simplebar.min.css";
 
 export default {
   components: {
-    ButtonCharacterLevel,
+    ButtonGenshin,
     AttributeItem,
     Simplebar,
     MainBackground,
@@ -300,5 +304,18 @@ h6 {
   font-weight: bold;
   color: #1d1d1d;
   opacity: 0.64;
+}
+
+.buttonCharacterLevelClass{
+    border: 1px solid #8E8E8E;
+    padding: 2.5px 10px;
+    cursor: pointer;
+}
+
+.buttonCharacterLevelClass > span{
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 1;
+  color:#2c3e50;
 }
 </style>
