@@ -1,11 +1,13 @@
 <template>
   <b-container class="bv-example-row">
-    <sign-in-button
-      v-b-modal.login-modal
-      label="Sign In"
-      :handler="signInHandler"
-      class="mt-5 mx-auto"
-    />
+    <button-genshin :buttonHandler="signInHandler" >
+      <div
+        class="signInButtonClass mt-5 mx-auto"
+        :style="{ backgroundImage: `url(${require('../assets/images/woodBlack.png')})` }"
+      >
+        <p>Sign In</p>
+      </div>
+    </button-genshin>
 
     <b-modal
       id="login-modal"
@@ -31,12 +33,10 @@
 </template>
 
 <script>
-import SignInButton from "./ButtonSignIn.vue";
 import ButtonGenshin from "./ButtonGenshin.vue";
 
 export default {
   components: {
-    SignInButton,
     ButtonGenshin,
   },
   methods: {
@@ -70,5 +70,22 @@ export default {
 }
 span {
   color: #ffffff;
+}
+
+.signInButtonClass {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  width: 255px;
+}
+
+.signInButtonClass:focus {
+  outline: none;
+}
+
+.signInButtonClass > p {
+  color: #efd4a5;
+  font-size: 1.5rem;
 }
 </style>
