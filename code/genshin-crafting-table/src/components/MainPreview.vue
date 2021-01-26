@@ -2,15 +2,11 @@
   <div class="previewClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between mb-2">
-        <span> Preview </span>
-
-        <span>{{ currentPreviewPage }}</span>
-
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+      <main-header 
+      page_name="Preview" 
+      :additional_name="currentPreviewPage" 
+      :close_handler="closeHandler" 
+      class="mb-2"/>
 
       <!-- Content -->
       <simplebar class="contentClass d-flex flex-wrap">
@@ -37,6 +33,7 @@
 <script>
 import ButtonGenshin from "./ButtonGenshin.vue";
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
@@ -46,6 +43,7 @@ export default {
     Simplebar,
     ButtonGenshin,
     MainBackground,
+    MainHeader
   },
   computed: {
     currentPreviewPage() {
@@ -70,16 +68,6 @@ export default {
 .contentClass {
   height: calc(100% - 25px);
   width: 100%;
-}
-
-span {
-  font-weight: bold;
-  color: #1d1d1d;
-  opacity: 0.64;
-}
-
-.closeButtonClass:hover {
-  cursor: pointer;
 }
 
 .characterButtonClass {

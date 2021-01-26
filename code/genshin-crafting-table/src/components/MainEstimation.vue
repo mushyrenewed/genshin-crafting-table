@@ -2,13 +2,12 @@
   <div class="mainEstimationClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between mb-3">
-        <span> Estimation </span>
+      <main-header 
+      page_name="Estimation" 
+      :close_handler="closeHandler" 
+      class="mb-3"/>
 
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+
       <simplebar class="mainEstimationDetails">
         <div class="w-100">
           <h5 class="mb-2">Enemy</h5>
@@ -54,6 +53,7 @@
 
 <script>
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
@@ -84,6 +84,7 @@ export default {
   },
   components: {
     MainBackground,
+    MainHeader,
     Simplebar,
   },
   methods: {
@@ -96,16 +97,12 @@ export default {
 .mainEstimationClass {
   height: 100%;
 }
+
 .mainEstimationDetails {
   height: calc(100% - 40px);
   overflow-x: hidden;
 }
-span {
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #1d1d1d;
-  opacity: 0.64;
-}
+
 
 h5 {
   font-weight: bold;

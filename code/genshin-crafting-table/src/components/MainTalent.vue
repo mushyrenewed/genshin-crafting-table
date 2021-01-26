@@ -2,13 +2,11 @@
   <div class="mainTalentClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between mb-3">
-        <span> Talent </span>
-
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+      <main-header 
+      page_name="Talent"
+      :close_handler="closeHandler"
+      class="mb-3"/>
+  
       <simplebar class="talentListClass "> 
           <div class="d-flex flex-column w-100">
               <template v-for="(talent, i) in talents">
@@ -40,6 +38,7 @@
 
 <script>
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
@@ -96,6 +95,7 @@ export default {
     },
   components: {
     MainBackground,
+    MainHeader,
     Simplebar,
   },
   props:{
@@ -120,13 +120,6 @@ export default {
 .talentListClass {
   height: calc(100% - 40px);
   overflow-x: hidden;
-}
-
-span {
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #1d1d1d;
-  opacity: 0.64;
 }
 
 a {

@@ -2,15 +2,10 @@
   <div class="attributeClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between">
-        <span> Attribute </span>
-
-        <span>Level {{ characterInfo.level }}</span>
-
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+      <main-header 
+      page_name="Attribute" 
+      :additional_name="'Level ' + characterInfo.level" 
+      :close_handler="closeHandler"></main-header>
 
       <div class="characterTraitsClass d-flex justify-content-center">
         <small class="mr-2" :style="{ color: elementColor }"
@@ -225,6 +220,8 @@
 import ButtonGenshin from "./ButtonGenshin.vue";
 import AttributeItem from "./AttributeItem.vue";
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
+
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
 
@@ -234,6 +231,7 @@ export default {
     AttributeItem,
     Simplebar,
     MainBackground,
+    MainHeader
   },
   computed: {
     characterInfo() {
@@ -271,20 +269,10 @@ export default {
   height: 100%;
 }
 
-span {
-  font-weight: bold;
-  color: #1d1d1d;
-  opacity: 0.64;
-}
-
 small {
   color: #1d1d1d;
   opacity: 0.64;
   font-weight: bold;
-  cursor: pointer;
-}
-
-.closeButtonClass {
   cursor: pointer;
 }
 

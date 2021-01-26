@@ -2,13 +2,12 @@
   <div class="mainConstellationClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between mb-3">
-        <span> Constellation </span>
+      <main-header 
+      page_name="Constellation" 
+      :close_handler="closeHandler"
+      class="mb-3" />
 
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+
       <simplebar class="constellationListClass">
         <div class="d-flex flex-column">
           <template v-for="(constellation, i) in constellations">
@@ -34,6 +33,7 @@
 
 <script>
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 
 import Simplebar from "simplebar-vue";
 import "simplebar/dist/simplebar.min.css";
@@ -104,6 +104,7 @@ export default {
   components: {
     MainBackground,
     Simplebar,
+    MainHeader,
   },
   methods: {
     getConstellations() {},
@@ -120,13 +121,6 @@ export default {
 .constellationListClass {
   height: calc(100% - 40px);
   overflow-x: hidden;
-}
-
-span {
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #1d1d1d;
-  opacity: 0.64;
 }
 
 a {

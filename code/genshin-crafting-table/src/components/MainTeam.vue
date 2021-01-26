@@ -2,13 +2,10 @@
   <div class="mainTeamClass">
     <main-background>
         <!-- Top Corner -->
-        <div class="topCornerClass d-flex justify-content-between mb-3">
-          <span> Team </span>
-    
-          <span class="closeButtonClass ml-5" @click="closeHandler">
-            <img src="../assets/images/close.svg" alt="close" />
-          </span>
-        </div>
+        <main-header 
+        page_name="Team"
+        :close_handler="closeHandler"
+        class="mb-3"/>
     
         <!-- Characters -->
         <div class="d-flex mb-5">
@@ -42,6 +39,7 @@
 
 <script>
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 import ToolElementResonance from "./ToolElementResonance.vue";
 
 export default {
@@ -58,6 +56,7 @@ export default {
     },
   components:{
       MainBackground,
+      MainHeader,
       ToolElementResonance
   },
   computed:{

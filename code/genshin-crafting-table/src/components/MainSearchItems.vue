@@ -2,13 +2,10 @@
   <div class="mainSearchClass">
     <main-background>
       <!-- Top Corner -->
-      <div class="topCornerClass d-flex justify-content-between mb-2">
-        <span> {{ previewType }} </span>
-
-        <span class="closeButtonClass ml-5" @click="closeHandler">
-          <img src="../assets/images/close.svg" alt="close" />
-        </span>
-      </div>
+      <main-header 
+      :page_name="previewType"
+      :close_handler="closeHandler"
+      class="mb-2"/>
 
       <!-- Search Bar -->
       <div class="input-group input-group-sm mb-2 w-75">
@@ -64,6 +61,7 @@
 
 <script>
 import MainBackground from "./MainBackground.vue";
+import MainHeader from "./MainHeader.vue";
 import ButtonGenshin from "./ButtonGenshin.vue";
 
 import Simplebar from "simplebar-vue";
@@ -83,6 +81,7 @@ export default {
   },
   components: {
     MainBackground,
+    MainHeader,
     Simplebar,
     ButtonGenshin,
   },
@@ -107,12 +106,6 @@ export default {
 <style scoped>
 .mainSearchClass {
   height: 100%;
-}
-
-.topCornerClass {
-  font-weight: bold;
-  color: #1d1d1d;
-  opacity: 0.64;
 }
 
 .filterClass:hover {
