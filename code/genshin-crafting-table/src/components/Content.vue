@@ -1,28 +1,18 @@
 <template>
     <b-container class="genshinContentClass">
-        <component :is="currentPage">
-
-        </component>
+        <router-view></router-view>
     </b-container>
 </template>
 
 <script>
-import PageSignIn from './PageSignIn.vue'
-import PageTeamName from './PageTeamName.vue'
-import PageCharacterSelect from './PageCharacterSelect.vue'
-import PageMain from './PageMain.vue'
+import { mapState } from 'vuex'
 
 export default {
     components: {
-        PageSignIn,
-        PageTeamName,
-        PageCharacterSelect,
-        PageMain
+
     },
-    computed: {
-        currentPage(){
-            return this.$store.state.page;
-        }
-    }
+    computed: mapState({
+        page: state => state.application.page
+    })
 }
 </script>

@@ -29,6 +29,9 @@ export default {
     GenshinContent,
     GenshinFooter,
   },
+  mounted(){
+    this.$router.push('/signIn').catch(()=>{});
+  }
 };
 </script>
 

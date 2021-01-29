@@ -1,6 +1,8 @@
 <template>
   <b-container class="bv-example-row">
-    <button-genshin :buttonHandler="signInHandler" >
+    <button-genshin :buttonHandler="signInHandler" 
+    v-b-modal.login-modal
+    >
       <div
         class="signInButtonClass mt-5 mx-auto"
         :style="{ backgroundImage: `url(${require('../assets/images/woodBlack.png')})` }"
@@ -14,6 +16,7 @@
       centered
       hide-footer
       header-class="border-bottom-0"
+      size="sm"
     >
       <h3 class="mb-4 pr-2">Save your progress with Google Account</h3>
       <button-genshin class="mb-5" :buttonHandler="googleSignInHandler">
