@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import application from './modules/application'
+import team from './modules/team'
 
 // Use store
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules:{
-        application
+        application,
+        team
     },
     // state:{
     //     page: "PageSignIn",

@@ -15,9 +15,12 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Team Name"
+        :placeholder="teamName !== '' ? teamName : 'Team Name'"
+        :value="teamName !== '' ? teamName : ''"
         aria-label="Team Name"
         aria-describedby="basic-addon1"
+        @change="update($event.target.value)"
+        @keypress.enter="enterKeyHander"
       />
     </div>
   </div>
@@ -25,6 +28,7 @@
 
 <script>
 import background from "../assets/images/woodBlack.svg";
+import { mapState, mapActions } from 'vuex';
 
 export default {
   data() {
@@ -32,6 +36,19 @@ export default {
       image: background
     };
   },
+  computed:{
+    ...mapState('team', {
+      teamName: state => state.name
+    })
+  },
+  methods:{
+    ...mapActions('team',{
+      update: 'changeName'
+    }),
+    enterKeyHander(){
+      this.$router.push('/characterSelect')
+    }
+  }
 };
 </script>
 
