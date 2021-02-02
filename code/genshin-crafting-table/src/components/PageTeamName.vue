@@ -19,8 +19,8 @@
         :value="teamName !== '' ? teamName : ''"
         aria-label="Team Name"
         aria-describedby="basic-addon1"
-        @change="update($event.target.value)"
-        @keypress.enter="enterKeyHander"
+        @change="changeName($event.target.value)"
+        @keypress.enter="enterKeyHandler"
       />
     </div>
   </div>
@@ -42,10 +42,8 @@ export default {
     })
   },
   methods:{
-    ...mapActions('team',{
-      update: 'changeName'
-    }),
-    enterKeyHander(){
+    ...mapActions('team', ['changeName']),
+    enterKeyHandler(){
       this.$router.push('/characterSelect')
     }
   }
